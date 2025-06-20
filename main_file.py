@@ -20,7 +20,7 @@ import config_file
 # When running locally, you can create a .streamlit/secrets.toml file.
 try:
     # Attempt to get the API key from Streamlit's secrets
-    GOOGLE_API_KEY = config_file.api_key
+    GOOGLE_API_KEY =config_file.api_key# st.secrets["GOOGLE_API_KEY"]
 except (FileNotFoundError, KeyError):
     # Fallback for local development if secrets.toml is not used
     # In this case, it will look for an environment variable
